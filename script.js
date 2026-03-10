@@ -1,4 +1,4 @@
-// Estrutura de decisão: Saudação baseada no horário
+// If else
 function saudacao() {
     const hora = new Date().getHours();
     let mensagem;
@@ -12,7 +12,7 @@ function saudacao() {
     document.getElementById('saudacao').textContent = mensagem;
 }
 
-// Comando de repetição: Gerar lista de cursos a partir de array
+// Repetição
 const cursos = [
     { nome: 'Introdução ao HTML', carga: '20h', ano: 2023 },
     { nome: 'CSS Avançado', carga: '30h', ano: 2024 },
@@ -28,7 +28,7 @@ function renderCursos() {
     }
 }
 
-// Função: Renderizar projetos dinamicamente
+// Render Projetos
 const projetos = [
     {
         nome: 'API 1° Semestre',
@@ -65,7 +65,7 @@ function renderProjetos() {
     }
 }
 
-// Função: Renderizar cards de links dinamicamente
+// Render Links
 const links = [
     {
         nome: 'GitHub',
@@ -98,7 +98,7 @@ function renderLinks() {
     }
 }
 
-// Função para alternar tema
+// Tema
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
     // Opcional: Salvar preferência no localStorage
@@ -109,7 +109,7 @@ function toggleTheme() {
     }
 }
 
-// Chamar as funções ao carregar a página
+// Funções ao carregar a pagina
 window.onload = function() {
     // Carregar tema salvo
     const savedTheme = localStorage.getItem('theme');
@@ -122,6 +122,7 @@ window.onload = function() {
     renderProjetos();
     renderLinks();
     
-    // Adicionar event listener ao botão
+    // event listener botão
     document.getElementById('toggle-theme').addEventListener('click', toggleTheme);
+
 };
